@@ -1,25 +1,50 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Navbar, Button, Nav } from 'react-bootstrap';
+import './utils/i18n';
+import { useTranslation } from 'react-i18next'
+import './App.scss';
+
+import Main from './components/Main';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contacts from './components/Contacts';
+import LangToggler from './components/LangToggler';
+import Footer from './components/Footer';
+
 
 function App() {
+  const { t } = useTranslation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <BrowserRouter>
+      <header>
+        <Navbar bg="light" expand="lg" className="fixed-top">
+          <Navbar.Brand>
+            <Link to="/"><img src={logo} className="App-logo" alt="logo"></img></Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="main-navbar-nav" />
+          <Navbar.Collapse id="main-navbar-nav">
+            <Nav className="mr-auto">
+              <Button variant="link"><Link to="/about">{t('about.title')}</Link></Button>
+              <Button variant="link"><Link to="/experience">{t('experience.title')}</Link></Button>
+              <Button variant="link"><Link to="/projects">{t('projects.title')}</Link></Button>
+              <Button variant="link"><Link to="/contacts">{t('contacts.title')}</Link></Button>
+            </Nav>
+            <LangToggler />
+          </Navbar.Collapse>
+        </Navbar>
       </header>
-    </div>
+      <main role="main" className="main_content">
+        <Route exact path="/" component={Main} />
+        <Route path="/about" component={About} />
+        <Route path='/experience' component={Experience} />
+        <Route path='/projects' component={Projects} />
+        <Route path='/contacts' component={Contacts} />
+      </main>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
