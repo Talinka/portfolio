@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'gendiff',
-    githubLink: '',
+    githubLink: 'https://github.com/Talinka/frontend-project-lvl1',
     link: ''
   },
   {
@@ -14,13 +14,13 @@ export default [
   {
     id: 3,
     name: 'chat',
-    githubLink: '',
-    link: ''
+    githubLink: 'https://github.com/Talinka/frontend-project-lvl4',
+    link: 'https://desolate-ocean-49295.herokuapp.com/'
   },
   {
     id: 4,
     name: 'memoji',
-    githubLink: '',
-    link: ''
+    githubLink: 'https://github.com/Talinka/memoji-game',
+    link: 'https://talinka.github.io/memoji-game/'
   },
 ];
