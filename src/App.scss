@@ -1,21 +1,30 @@
 
 $body-color: #212c26;
-$light: #d8e6fc;
-$jumbotron-bg: #b6ebac;
+$light: #f4eddf;
+$link-color: #525f64;
+$jumbotron-bg: #e2eaec;
 
-$theme-colors: (
-  "primary": #4446d3,
-  "secondary": green,
-  "danger": #ff4136
-);
+$primary: #a7baba;
+$secondary: #dbd8cd;
 
+$link-decoration: underline;
+
+$photo-count: 12;
+$motto-color: #7c5511;
+$active-color: #212c26;
 
 @import "~bootstrap/scss/bootstrap";
 
 :root {
-  --footer-height: 60px;
+  --footer-height: 10vh;
   --page-top-margin: 30px;
   --column-bottom-margin: 30px;
+  --gallery-photo-size: 20vh;
+  --vertical-margin: 15px;
+}
+
+body {
+  font-family: Lato, serif;
 }
 
 .App, h3 {
@@ -23,7 +32,7 @@ $theme-colors: (
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 7vmin;
   pointer-events: none;
 }
 
@@ -38,8 +47,12 @@ $theme-colors: (
   color: white;
 }
 
-.base_col {
-  margin: auto auto var(--column-bottom-margin);
+.base-col {
+  margin-bottom: var(--column-bottom-margin);
+}
+
+.base-col .card {
+  height: 100%;
 }
 
 // Toggler
@@ -49,7 +62,7 @@ $theme-colors: (
 }
 
 .btn-group-toggle > .active {
-  color: $primary;
+  color: $active-color;
   font-weight: bold;
 }
 
@@ -57,28 +70,16 @@ $theme-colors: (
   color: black;
 }
 
-
-.exp {
-  box-shadow: $box-shadow-sm;
-}
-
-.exp:hover {
-  box-shadow: $box-shadow;
-}
-
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  height: var(--footer-height);
   line-height: var(--footer-height);
-  background-color: #f5f5f5;
+  background-color: $light;
 }
 
-.main_content {
+.main-content {
   padding: calc(10vmin + 40px) 15px 0;
   max-width: 920px;
   margin: 0 auto;
+  min-height: calc(100vh - var(--footer-height));
 }
 
 .contact-form {
@@ -102,11 +103,19 @@ $theme-colors: (
   display: flex;
 }
 
-.personal_photo {
-  width: 100%;
+.personal-photo {
+  width: 25vw;
+  max-width: 400px;
+  float: left;
+  margin: 30px;
 }
 
-.page_header {
+.list-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
   text-align: center;
   margin-top: var(--page-top-margin);
   margin-bottom: var(--page-top-margin);
@@ -118,7 +127,7 @@ $theme-colors: (
   opacity: 1;
 }
 
-.base_col:hover .overlayed {
+.base-col:hover .overlayed {
   transition: 1s ease;
   background: $secondary;
   opacity: 0.4;
@@ -136,7 +145,7 @@ $theme-colors: (
   justify-content: space-around;
 }
 
-.base_col:hover .addInfo {
+.base-col:hover .addInfo {
   transition: 1s ease;
   opacity: 1;
 }
@@ -144,9 +153,11 @@ $theme-colors: (
 .container-overlay {
   width: 50%;
   position: relative;
+  margin: 0 auto;
 }
 
 .container-overlay > img {
+  transition: 0.5s ease-in;
   width: 100%;
 }
 
@@ -162,10 +173,82 @@ $theme-colors: (
 
 .container-overlay:hover .logo-overlay {
   opacity: 1;
-  transition: 1s ease;
 }
 
 .container-overlay:hover .logo {
   opacity: 0;
-  transition: 1s ease;
+}
+
+// Gallery
+
+@mixin photo($photo-num) {
+  .photo-#{$photo-num} {
+    background-image: url('./assets/img/gallery/#{$photo-num}.jpg');
+  }
+}
+
+@for $num from 1 through $photo-count {
+  @include photo($num);
+}
+
+.photo {
+  background-size: 100% 100%;
+  height: var(--gallery-photo-size);
+  width: var(--gallery-photo-size);
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url('./assets/img/icons/circle.svg');
+  transform: translateY(25%);
+  -ms-transform: translateY(25%);
+}
+
+.hobby-list {
+  margin: var(--vertical-margin)  auto;
+  width: 80%;
+}
+
+.hobby {
+  margin-bottom: 5px;
+}
+
+.active .circle {
+  animation: dancing_circle 0.8s linear;
+}
+
+@keyframes dancing_circle {
+	30%, to {
+		transform: translateY(-5px);
+  }
+  60%, to {
+		transform: translateY(5px);
+  }
+  80%, to {
+		transform: translateY(-2px);
+  }
+  100%, to {
+		transform: translateY(2px);
+	}
+}
+
+.motto {
+  font-size: 2rem;
+  font-family: 'Montserrat', serif;
+  color: $motto-color;
+}
+
+.cv {
+  text-align: center;
 }

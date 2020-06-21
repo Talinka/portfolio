@@ -3,18 +3,36 @@ export default {
     about: {
       title: 'About',
       subtitle: 'About me',
-      text:
-        `Hello, I'm Natalia. I used to spend a lot of time developing desktop applications, and my favorit part was
-        creating smart and functional user interfaces. Thus I desided to dive into absolutely new for me and very exiting
-        front-end web development. It turn out to be more difficult than I expected (much more difficult, actually :), but
-        I like it and want to learn new things and practices.`,
+      aboutMe: [
+        `Hello, I'm Natalia. As a C# developer I used to spend a lot of time developing desktop applications, and my favorite part
+        was creating smart and functional user interfaces with Win Forms. During the parental leave I decided to completely change my specialisation
+        and dive into absolutely new for me exciting world of front-end web development. Thus I've been taking courses and do my best to obtain best practices
+        of the modern fron-end development. It turned out to be more difficult than I expected
+        (much more difficult, actually :), but I'm enthusiastic about developing and improving this skills. I'm responsible, open-minded and friendly,
+        and I truly like to gain knowleage.`,
+        `I am from Moscow, Russia. In August 2018 I relocated to Brno, Czech Republic with my family. I'm learning Czech language with great interest,
+        my current language level is B1.`,
+        `In my spare time I do something from the list below or just to relax with my family.`,
+      ],
+      hobbies: [
+        'painting',
+        'craft and decoration',
+        'planting',
+        'travelling',
+        'cycling and hiking',
+        'photography',
+        'cooking and food garnishing',
+        'playing piano',
+        'birdwatching',
+      ],
+      aboutGallery: '',
     },
     experience: {
       title: 'Experience',
       subtitle: 'Education and experience',
       job: {
+        title: 'Experience',
         name: 'Research and Developing Institute Kvant',
-        years: '2004-2018',
         responsibilities: 'Responsibilities',
         responsibilitiesList: [
           'developing different parts of the big data processing system',
@@ -23,9 +41,12 @@ export default {
         ],
       },
       institute: {
+        title: 'Education',
         name: 'Moscow Aviation Institute',
-        years: '1999-2005',
         degree: 'Specialist, Applied Mathematics, Programming'
+      },
+      courses: {
+        title: 'Courses',
       },
     },
     projects: {
@@ -38,19 +59,23 @@ export default {
       },
       gendiff: {
         title: 'Gendiff',
-        subtitle: 'Console util',
-        description: 'Simple console util for comparing two versions of files.',
+        subtitle: 'Console utility',
+        description: `Simple console utility for comparing two versions of configuration files.
+          Supports different kind of file: json, ini, yml.
+          Result could be output in simpe text form, verbose text form or as json.
+          Used technologies: make, babel, TDD, writing tests with Jest, creating node package.`,
       },
       memoji: {
         title: 'Memoji game',
         subtitle: 'Memory card game with emojis',
-        description: 'Just vanilla Javascript and CSS :)',
+        description: 'Just vanilla Javascript and CSS :) Interaction with help of CSS animation.',
       },
       chat: {
         title: 'Chat',
         subtitle: 'Simple messenger',
         description: 'Websocket, Redux',
       },
+      portfolio: 'This webpage sources could be found on GitHub as well',
     },
     contacts: {
       title: 'Contacts',

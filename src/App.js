@@ -10,7 +10,6 @@ import Main from './components/Main';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Contacts from './components/Contacts';
 import LangToggler from './components/LangToggler';
 import Footer from './components/Footer';
 
@@ -27,23 +26,21 @@ function App() {
           <Navbar.Toggle aria-controls="main-navbar-nav" />
           <Navbar.Collapse id="main-navbar-nav">
             <Nav className="mr-auto">
-              <Button variant="link"><Link to="/about">{t('about.title')}</Link></Button>
-              <Button variant="link"><Link to="/experience">{t('experience.title')}</Link></Button>
               <Button variant="link"><Link to="/projects">{t('projects.title')}</Link></Button>
-              <Button variant="link"><Link to="/contacts">{t('contacts.title')}</Link></Button>
+              <Button variant="link"><Link to="/experience">{t('experience.title')}</Link></Button>
+              <Button variant="link"><Link to="/about">{t('about.title')}</Link></Button>
             </Nav>
             <LangToggler />
           </Navbar.Collapse>
         </Navbar>
       </header>
-      <main role="main" className="main_content">
+      <main role="main" className="main-content">
         <Route exact path="/" component={Main} />
         <Route path="/about" component={About} />
         <Route path='/experience' component={Experience} />
         <Route path='/projects' component={Projects} />
-        <Route path='/contacts' component={Contacts} />
       </main>
-      <Footer />
+      <Route path={["/about", "/experience", "/projects"]} component={Footer} />
     </BrowserRouter>
   );
 }

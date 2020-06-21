@@ -7,7 +7,7 @@ const Contacts = (props) => {
   const { t } = useTranslation();
   return (
     <>
-    <h3 className="page_header">{t('contacts.title')}</h3>
+    <h3 className="page-header">{t('contacts.title')}</h3>
       <Container>
         <Form className="contact-form border rounded bg-light shadow-sm">
           <Form.Group controlId="formName">

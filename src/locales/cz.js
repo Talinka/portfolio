@@ -1,18 +1,42 @@
 export default {
   translation: {
     contacts: 'Kontakty',
-    about: 'About me',
+    about: {
+      title: 'O mně',
+      subtitle: 'O mně',
+      aboutMe: [
+        `Ahoj, jmenuji se Natalia. Jako C# programátorka jsem trávila hodně času rozvojem desktopových aplikací, a nejvíc ze všeho mě bavilo
+        vytvoření grafických uživatelských rozhraní. Tak jsem rozhodla se ponořit do úplně pro mě nového a velice
+        zajímavého sveta front-end vývoje. Ukázalo se to těžší než jsem očekávala, ale stálo to za to. Mám ho ráda
+        a chci i nadále se učit novým věcem a rozvíjet své dovednosti.`,
+        `Jsem z Ruska, z Moskvy. Před dvěma roky jsem se přestěhovala a teď bydlím v Brně. Učím se cesky a baví mě to, až na čárky :)
+        Když mám volný čas, obvykle dělám něco z následujícího seznamu nebo prostě relaxuju z rodinou.`,
+      ],
+      hobbies: [
+        'kreslení',
+        'dekorování',
+        'pěstování květin',
+        'cestování',
+        'cyklistika nebo hiking',
+        'fotografování',
+        'vaření',
+        'hra na klavír',
+        'birdwatching',
+      ],
+      relax: 'nebo prostě relaxuju z rodinou.',
+      aboutGallery: '',
+    },
     experience: {
-      title: 'Zkušenosti',
-      kvant: {
-        name: 'RDI Kvant',
-        years: '2004-2018',
-        responsibilities: 'responsibilities',
-        responsibilitiesList: [
-          'developing different parts of the big data processing system',
-          'creating Windows desktop applications using DevExpress WinForms components',
-          'working with Microsoft SQL Server',
-        ],
+      title: 'Praxe',
+      subtitle: 'Praxe a vzdělání',
+      job: {
+        title: 'Praxe',
+      },
+      institute: {
+        title: 'Vzdělání',
+      },
+      courses: {
+        title: 'Kurzy',
       },
     },
     projects: {
