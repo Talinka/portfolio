@@ -1,4 +1,4 @@
-
+![CI](https://github.com/Talinka/portfolio/workflows/CI/badge.svg)
 
 ## Portfolio Single-page application
 
