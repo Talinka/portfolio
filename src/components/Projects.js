@@ -7,6 +7,20 @@ import projects from '../assets/projects';
 const Projects = () => {
   const { t } = useTranslation();
 
+  const createUseList = (use) => {
+    if (!use) {
+      return null;
+    }
+    return (
+      <>
+        <h5>{t('projects.frameworks')}</h5>
+        <ul>
+          {use.map((tech, i) => <li key={i}>{tech}</li>)}
+        </ul>
+      </>
+    );
+  }
+
   return (
     <>
       <h3 className="page-header">{t('projects.subtitle')}</h3>
@@ -20,16 +34,19 @@ const Projects = () => {
                 <Card.Text>
                   {t(`projects.${name}.description`)}
                 </Card.Text>
+                {createUseList(t(`projects.${name}.use`, { returnObjects: true }))}
               </Card.Body>
             </Card>
             <div className="addInfo">
-                <Button href={githubLink} target="_blank">GitHub</Button>
-                {link && <Button href={link} target="_blank">Demo</Button>}
+              <Button href={githubLink} target="_blank">GitHub</Button>
+              {link && <Button href={link} target="_blank">Demo</Button>}
             </div>
           </Col>
         ))}
       </Row>
-      <a className="d-block text-center" href="https://github.com/Talinka/portfolio" alt="portfolio sources">{t('projects.portfolio')}</a>
+      <a className="d-block text-center" href="https://github.com/Talinka/portfolio" alt="portfolio sources">
+        {t('projects.portfolio')}
+      </a>
     </>
   );
 }
