@@ -21,11 +21,11 @@ const Experience = () => {
         <Container>
           <span className="h5">Full front-end delevoper course, </span>
           <span className="h5 mb-2 text-muted">2019-2020, </span>
-          <a href="https://ru.hexlet.io/u/talita">Hexlet.io</a>
+          <a href="https://ru.hexlet.io/professions/frontend" target="_blank" rel="noopener noreferrer">Hexlet.io</a>
           <hr />
           <span className="h5">Front-end development and JavaSpript, </span>
           <span className="h5 mb-2 text-muted">2018, </span>
-          <a href="https://www.coursera.org/specializations/razrabotka-interfeysov">Coursera.org</a>
+          <a href="https://www.coursera.org/specializations/razrabotka-interfeysov" target="_blank" rel="noopener noreferrer">Coursera.org</a>
         </Container>
       </Jumbotron>
       <h4>{t('experience.job.title')}</h4>

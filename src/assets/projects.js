@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'gendiff',
-    githubLink: 'https://github.com/Talinka/frontend-project-lvl1',
+    githubLink: 'https://github.com/Talinka/frontend-project-lvl2',
     link: ''
   },
   {
