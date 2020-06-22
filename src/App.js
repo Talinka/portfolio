@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { HashRouter, Route, Link } from 'react-router-dom';
 import { Navbar, Button, Nav } from 'react-bootstrap';
 import './utils/i18n';
 import { useTranslation } from 'react-i18next'
@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 function App() {
   const { t } = useTranslation();
   return (
-    <BrowserRouter>
+    <HashRouter>
       <header>
         <Navbar bg="light" expand="lg" className="fixed-top">
           <Navbar.Brand>
@@ -41,7 +41,7 @@ function App() {
         <Route path='/projects' component={Projects} />
       </main>
       <Route path={["/about", "/experience", "/projects"]} component={Footer} />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
