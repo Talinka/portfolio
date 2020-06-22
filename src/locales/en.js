@@ -32,7 +32,7 @@ export default {
       subtitle: 'Education and experience',
       job: {
         title: 'Experience',
-        name: 'Research and Developing Institute Kvant',
+        name: 'Research and Development Institute Kvant',
         responsibilities: 'Responsibilities',
         responsibilitiesList: [
           'developing different parts of the big data processing system',
