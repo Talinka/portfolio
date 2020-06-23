@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set +eux
+set -eux
 URL="git@github.com:Talinka/Talinka.github.io.git"
 ROOT=$(cd $(dirname "$0"); cd ..; pwd)
 

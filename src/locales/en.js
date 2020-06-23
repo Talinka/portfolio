@@ -7,12 +7,12 @@ export default {
         `Hello, I'm Natalia. As a C# developer I used to spend a lot of time developing desktop applications, and my favorite part
         was creating smart and functional user interfaces with Win Forms. During the parental leave I decided to completely change my specialisation
         and dive into absolutely new for me exciting world of front-end web development. Thus I've been taking courses and do my best to obtain best practices
-        of the modern fron-end development. It turned out to be more difficult than I expected
-        (much more difficult, actually :), but I'm enthusiastic about developing and improving this skills. I'm responsible, open-minded and friendly,
-        and I truly like to gain knowleage.`,
+        of the modern front-end development. It turned out to be more difficult than I expected
+        (much more difficult, actually :), but I'm enthusiastic about developing and improving these skills. I'm responsible, open-minded and friendly,
+        and I truly like to gain knowledge.`,
         `I am from Moscow, Russia. In August 2018 I relocated to Brno, Czech Republic with my family. I'm learning Czech language with great interest,
         my current language level is B1.`,
-        `In my spare time I do something from the list below or just to relax with my family.`,
+        `In my spare time I do something from the list below or just relax with my family.`,
       ],
       hobbies: [
         'painting',
@@ -21,7 +21,7 @@ export default {
         'travelling',
         'cycling and hiking',
         'photography',
-        'cooking and food garnishing',
+        'food garnishing',
         'playing piano',
         'birdwatching',
       ],
@@ -36,7 +36,7 @@ export default {
         responsibilities: 'Responsibilities',
         responsibilitiesList: [
           'developing different modules for stream processing and clustering data in the big dataflow system',
-          'creating Windows desktop tools using DevExpress WinForms components',
+          'creating Windows desktop tools using DevExpress WinForms components for pipeline controlling and configuration.',
           'registering, storing and manipulating the information elements of our system using Microsoft SQL Server database',
         ],
       },
@@ -51,36 +51,36 @@ export default {
     },
     projects: {
       title: 'Projects',
-      subtitle: 'My front-end projects',
+      subtitle: 'My projects',
       frameworks: 'Frameworks and technologies',
       rss: {
         title: 'RSS aggregator',
         subtitle: 'Simple RSS aggregator',
         description: `Web application for browsing posts from added rss-feeds.
-          Checking if input url is valid and hasn't already added. Automatic reloading of  rss-sources.`,
-        use: ['jquery', 'promises', 'webpack', 'axios', 'validation with yup', 'bootstrap', 'eslint', 'CORS proxy', 'internationalization with i18next'],
+          Checks if input url is valid and hasn't already been added. Automatically reloads rss-sources.`,
+        use: ['JQuery', 'Promises', 'webpack', 'axios', 'validation with Yup', 'Bootstrap', 'ESLint', 'CORS proxy', 'internationalization with i18next'],
 
       },
       gendiff: {
         title: 'Gendiff',
         subtitle: 'Console utility',
         description: `Simple console utility for comparing two versions of configuration files.
-          Supports different kind of file: json, ini, yml.
+          Supports different file formats: json, ini, yml.
           The result could be output in simple text form, verbose text form or as json.`,
         use: ['make', 'babel', 'TDD', 'writing tests with Jest', 'creating node package'],
       },
       memoji: {
         title: 'Memoji game',
         subtitle: 'Memory card game with emojis',
-        description: 'Just vanilla Javascript and CSS :) Interaction with help of CSS animation.',
+        description: 'Just vanilla JavaScript and CSS :) For interaction the application uses CSS animation.',
         use: '',
       },
       chat: {
         title: 'Chat',
         subtitle: 'Simple messenger',
-        description: `Web application for a chat, an analog of slack. Users can add, delete, and rename message channels and send messages on every channel.
-          The full system state stores in Redux. For getting new messages uses websockets.`,
-        use: ['websockets with socket.io', 'React', 'Redux', 'Redux-toolkit', 'React Form with formik', 'Bootstrap on React', 'webpack', 'eslint'],
+        description: `Chat web application, an analog of Slack. Users can add, delete, and rename message channels and send messages on every channel.
+          The full system state is stored in Redux. For real time messages synchronization application uses WebSockets.`,
+        use: ['WebSockets with Socket.IO', 'React', 'Redux', 'Redux-toolkit', 'React Form with Formik', 'Bootstrap on React', 'webpack', 'ESLint'],
       },
       portfolio: 'This webpage sources could be found on GitHub as well',
     },

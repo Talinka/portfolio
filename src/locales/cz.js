@@ -41,7 +41,7 @@ export default {
     },
     projects: {
       title: 'Projekty',
-      subtitle: 'Moje front-end projecty',
+      subtitle: 'Moje projecty',
       rss: {
         title: 'RSS agregátor',
         subtitle: 'Simple RSS aggregator interface',
