@@ -19,7 +19,7 @@ function App() {
   return (
     <HashRouter>
       <header>
-        <Navbar bg="light" expand="lg" className="fixed-top">
+        <Navbar collapseOnSelect bg="light" expand="lg" className="fixed-top">
           <Navbar.Brand>
             <Link to="/"><img src={logo} className="App-logo" alt="logo"></img></Link>
           </Navbar.Brand>

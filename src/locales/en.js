@@ -35,9 +35,9 @@ export default {
         name: 'Research and Development Institute Kvant',
         responsibilities: 'Responsibilities',
         responsibilitiesList: [
-          'developing different parts of the big data processing system',
-          'creating Windows desktop applications using DevExpress WinForms components',
-          'working with Microsoft SQL Server',
+          'developing different modules for stream processing and clustering data in the big dataflow system',
+          'creating Windows desktop tools using DevExpress WinForms components',
+          'registering, storing and manipulating information elements of our system using Microsoft SQL Server database',
         ],
       },
       institute: {
