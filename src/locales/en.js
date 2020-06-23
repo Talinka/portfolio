@@ -37,7 +37,7 @@ export default {
         responsibilitiesList: [
           'developing different modules for stream processing and clustering data in the big dataflow system',
           'creating Windows desktop tools using DevExpress WinForms components',
-          'registering, storing and manipulating information elements of our system using Microsoft SQL Server database',
+          'registering, storing and manipulating the information elements of our system using Microsoft SQL Server database',
         ],
       },
       institute: {
