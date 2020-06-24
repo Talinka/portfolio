@@ -13,7 +13,8 @@ const HobbyList = () => {
 
   return (
     <>
-      <Row className="hobby-list">
+      <p>{t('about.hobbyDescription')}</p>
+      <Row className="formatted-list">
         {hobbies.map((hobby, i) => (
           <Col lg={4} sm={6}
             className={`hobby${(active === i) ? ' active' : ''}`}

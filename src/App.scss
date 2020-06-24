@@ -21,14 +21,16 @@ $active-color: #212c26;
   --column-bottom-margin: 30px;
   --gallery-photo-size: 20vh;
   --vertical-margin: 15px;
+  --double-vertical-margin: 30px;
 }
 
 body {
-  font-family: Lato, serif;
+  font-family: 'Noto Sans KR', serif;
 }
 
 .App, h3 {
   text-align: center;
+  margin-bottom: var(--double-vertical-margin);
 }
 
 .App-logo {
@@ -104,8 +106,8 @@ body {
 }
 
 .personal-photo {
-  width: 25vw;
-  max-width: 400px;
+  width: 400px;
+  max-width: 90%;
   float: left;
   margin: 15px;
 }
@@ -215,7 +217,7 @@ body {
   -ms-transform: translateY(25%);
 }
 
-.hobby-list {
+.formatted-list {
   margin: var(--vertical-margin)  auto;
   width: 80%;
 }
@@ -245,10 +247,15 @@ body {
 
 .motto {
   font-size: 2rem;
-  font-family: 'Montserrat', serif;
+  font-family: 'Oxygen', 'Montserrat', serif;
   color: $motto-color;
 }
 
 .cv {
   text-align: center;
+}
+
+.social-icon {
+  height: 32px;
+  margin: 8px;
 }
