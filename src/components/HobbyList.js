@@ -1,24 +1,40 @@
 import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Modal } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 // hobby's num for photos
-const galleryTags = [ 1, 6, 3, 8, 2, 6, 0, 2, 6, 3, 0, 6 ];
+const galleryTags = [1, 6, 3, 8, 2, 6, 0, 2, 6, 3, 0, 6];
 
 const HobbyList = () => {
   const { t } = useTranslation();
   const hobbies = t('about.hobbies', { returnObjects: true });
   const [active, setActive] = useState(-1);
-  const handleHover = (id) => () => { setActive(galleryTags[id]); };
+  const handleHover = (index) => () => setActive(index);
+
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+  const getModal = () => (
+    <Modal show={show} onHide={handleClose}>
+      <Modal.Body>
+        <button type="button" className="close" onClick={handleClose}>
+          <span aria-hidden="true">×</span>
+          <span className="sr-only">Close</span>
+        </button>
+        <div className={`img-fluid photo-big photo-${active + 1}`} />
+      </Modal.Body>
+    </Modal>
+  );
 
   return (
     <>
       <p>{t('about.hobbyDescription')}</p>
       <Row className="formatted-list">
-        {hobbies.map((hobby, i) => (
+        {hobbies.map((hobby, index) => (
           <Col lg={4} sm={6}
-            className={`hobby${(active === i) ? ' active' : ''}`}
-            key={i}
+            className={`hobby${(galleryTags[active] === index) ? ' active' : ''}`}
+            key={index}
           >
             <span className="circle" />
             {hobby}
@@ -26,10 +42,11 @@ const HobbyList = () => {
         ))}
       </Row>
       <Container className="gallery">
-        {galleryTags.map((tag, i) => (
-          <div key={i} className={`shadow photo photo-${i + 1}`} onMouseOver={handleHover(i)}/>
+        {galleryTags.map((tag, index) => (
+          <div key={index} className={`shadow photo-thumb photo-${index + 1}`} onMouseOver={handleHover(index)} onClick={handleShow} />
         ))}
       </Container>
+      {getModal()}
     </>
   );
 };
