@@ -22,11 +22,14 @@ $footer-height: 10vh;
 $page-top-margin: 30px;
 $column-bottom-margin: 30px;
 $gallery-photo-size: 20vh;
-$vertical-margin: 15px;
-$double-vertical-margin: 30px;
+$element-margin: 15px;
+$double-element-margin: 30px;
 
 $social-icon-height: 32px;
 $social-icon-margin: $social-icon-height / 2;
+
+$photo-sizes: ("extra-small": 70vw, "small": 400px, "medium": 500px, "large": 700px);
+$photo-breakpoints: ("small": 576px, "medium": 768px, "large": 992px);
 
 body {
   font-family: 'Open Sans', serif;
@@ -34,8 +37,8 @@ body {
 
 .App, h3 {
   text-align: center;
-  margin-bottom: $double-vertical-margin;
-  margin-top: $double-vertical-margin;
+  margin-bottom: $double-element-margin;
+  margin-top: $double-element-margin;
 }
 
 .App-logo {
@@ -194,22 +197,51 @@ body {
 
 // Gallery
 
-@mixin photo($photo-num) {
+@mixin photo($photo-num, $photo-type) {
   .photo-#{$photo-num} {
-    background-image: url('./assets/img/gallery/#{$photo-num}.jpg');
+    background-image: url('./assets/img/gallery/#{$photo-num}-#{$photo-type}.jpg');
   }
 }
 
 @for $num from 1 through $photo-count {
-  @include photo($num);
+  @each $type in ('thumb', 'big') {
+    @include photo($num, $type);
+  }
 }
 
-.photo {
+.photo-thumb {
   background-size: 100% 100%;
   height: $gallery-photo-size;
   width: $gallery-photo-size;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  margin-right: $element-margin;
+  margin-bottom: $element-margin;
+}
+
+.photo-big {
+  background-size: 100% 100%;
+  height: 100%;
+}
+
+.modal-content {
+  height: 100%;
+}
+
+@media (max-width: map-get($photo-breakpoints, "small")) {
+  .modal-dialog {
+    max-width: map-get($photo-sizes, "small");
+    height: map-get($photo-sizes, "extra-small");
+    width: map-get($photo-sizes, "extra-small");
+    margin: auto;
+  }
+}
+
+@each $size-name, $width in $photo-breakpoints {
+  @media (min-width: $width) {
+    .modal-dialog {
+      max-width: map-get($photo-sizes, $size-name);
+      height: map-get($photo-sizes, $size-name);
+    }
+  }
 }
 
 .gallery {
@@ -229,7 +261,7 @@ body {
 }
 
 .formatted-list {
-  margin: $vertical-margin  auto;
+  margin: $element-margin  auto;
   width: 80%;
 }
 
