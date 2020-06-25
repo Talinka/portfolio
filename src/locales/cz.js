@@ -8,7 +8,7 @@ export default {
         `Ahoj, jmenuji se Natalia. Jako C# programátorka jsem se zabývala rozvojem desktopových aplikací, a nejvíc ze všeho mě bavilo
         vytvoření grafických uživatelských rozhraní. Tak jsem během mateřské dovolené rozhodla úplně změnit svůj obor a ponořit se do
         úplně nového a velice zajímavého sveta front-end vývoje.`,
-        `Ukázalo se to těžší než jsem očekávala, ale stálo to za to. Absolvovala jsem několik kurzů a snažila jsem s nich vytezi co nejvic.
+        `Ukázalo se to těžší než jsem očekávala, ale stálo to za to. Absolvovala jsem několik kurzů a snažila jsem s nich vytěžit co nejvic.
         Mám chuť se i nadále učit novým věcem a rozvíjet své dovednosti.`,
         `Jsem spolehlivá, přátelská a otevřená novým myšlenkám.`,
         `Jsem z Ruska, z Moskvy. Před dvěma roky jsem se s rodinou přestěhovala a teď bydlím v Brně. Učím se cesky a baví mě to, až na čárky :)
