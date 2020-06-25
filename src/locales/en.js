@@ -30,6 +30,8 @@ export default {
       contactTitle: 'Contacts',
       contactDescription: `I'm currently available for full-time work. If you're
         interested in working with me, please get in touch using one of the method below.`,
+      contactDirect: 'Contact me directly',
+      contactSocial: 'Social networks',
     },
     experience: {
       title: 'Experience',

@@ -33,10 +33,12 @@ const About = (props) => {
         <p>{t('about.contactDescription')}</p>
         <Row className="formatted-list">
           <Col sm={12} md={6}>
+            <h5>{t('about.contactDirect')}</h5>
             {[socials.email, socials.gitHub, socials.linkedIn]
               .map((contact, i) => getSocial(contact, i))}
           </Col>
           <Col sm={12} md={6}>
+            <h5>{t('about.contactSocial')}</h5>
             {getSocial(socials.instagram)}
           </Col>
         </Row>
