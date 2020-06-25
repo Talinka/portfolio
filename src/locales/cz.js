@@ -5,11 +5,13 @@ export default {
       title: 'O mně',
       aboutTitle: 'O mně',
       aboutDescription: [
-        `Ahoj, jmenuji se Natalia. Jako C# programátorka jsem trávila hodně času rozvojem desktopových aplikací, a nejvíc ze všeho mě bavilo
-        vytvoření grafických uživatelských rozhraní. Tak jsem se rozhodla ponořit do úplně pro mě nového a velice
-        zajímavého sveta front-end vývoje. Ukázalo se to těžší než jsem očekávala, ale stálo to za to. Mám ho ráda
-        a chci i nadále se učit novým věcem a rozvíjet své dovednosti.`,
-        `Jsem z Ruska, z Moskvy. Před dvěma roky jsem se přestěhovala a teď bydlím v Brně. Učím se cesky a baví mě to, až na čárky :)
+        `Ahoj, jmenuji se Natalia. Jako C# programátorka jsem se zabývala rozvojem desktopových aplikací, a nejvíc ze všeho mě bavilo
+        vytvoření grafických uživatelských rozhraní. Tak jsem během mateřské dovolené rozhodla úplně změnit svůj obor a ponořit se do
+        úplně nového a velice zajímavého sveta front-end vývoje.`,
+        `Ukázalo se to těžší než jsem očekávala, ale stálo to za to. Absolvovala jsem několik kurzů a snažila jsem s nich vytezi co nejvic.
+        Mám chuť se i nadále učit novým věcem a rozvíjet své dovednosti.`,
+        `Jsem spolehlivá, přátelská a otevřená novým myšlenkám.`,
+        `Jsem z Ruska, z Moskvy. Před dvěma roky jsem se s rodinou přestěhovala a teď bydlím v Brně. Učím se cesky a baví mě to, až na čárky :)
         Teď mám úroveň B1 a pokračuju dál.`,
       ],
       hobbyTitle: 'Koníčky',
@@ -44,7 +46,7 @@ export default {
     },
     projects: {
       title: 'Projekty',
-      subtitle: 'Moje projecty',
+      subtitle: 'Moje projekty',
       rss: {
         title: 'RSS agregátor',
         subtitle: 'Simple RSS aggregator interface',
@@ -56,7 +58,7 @@ export default {
         description: 'Simple console util for comparing two versions of files.',
       },
       memoji: {
-        title: 'Memoji game',
+        title: 'Hra Memoji',
         subtitle: 'Memory card game with emojis',
         description: 'Just vanilla Javascript and CSS :)',
       },

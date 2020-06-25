@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Parisienne|Montserrat|Open+Sans|Oxygen");
+
+// reload bootstrap variables
 
 $body-color: #212c26;
 $light: #f4eddf;
@@ -8,29 +11,31 @@ $primary: #a7baba;
 $secondary: #dbd8cd;
 
 $link-decoration: underline;
-
-$photo-count: 12;
-$motto-color: #7c5511;
 $active-color: #212c26;
 
 @import "~bootstrap/scss/bootstrap";
 
-:root {
-  --footer-height: 10vh;
-  --page-top-margin: 30px;
-  --column-bottom-margin: 30px;
-  --gallery-photo-size: 20vh;
-  --vertical-margin: 15px;
-  --double-vertical-margin: 30px;
-}
+$motto-color: #7c5511;
+$photo-count: 12;
+
+$footer-height: 10vh;
+$page-top-margin: 30px;
+$column-bottom-margin: 30px;
+$gallery-photo-size: 20vh;
+$vertical-margin: 15px;
+$double-vertical-margin: 30px;
+
+$social-icon-height: 32px;
+$social-icon-margin: $social-icon-height / 2;
 
 body {
-  font-family: 'Noto Sans KR', serif;
+  font-family: 'Open Sans', serif;
 }
 
 .App, h3 {
   text-align: center;
-  margin-bottom: var(--double-vertical-margin);
+  margin-bottom: $double-vertical-margin;
+  margin-top: $double-vertical-margin;
 }
 
 .App-logo {
@@ -50,7 +55,7 @@ body {
 }
 
 .base-col {
-  margin-bottom: var(--column-bottom-margin);
+  margin-bottom: $column-bottom-margin;
 }
 
 .base-col .card {
@@ -73,7 +78,7 @@ body {
 }
 
 .footer {
-  line-height: var(--footer-height);
+  line-height: $footer-height;
   background-color: $light;
 }
 
@@ -81,7 +86,7 @@ body {
   padding: calc(10vmin + 40px) 15px 0;
   max-width: 920px;
   margin: 0 auto;
-  min-height: calc(100vh - var(--footer-height));
+  min-height: 100vh - $footer-height;
 }
 
 .contact-form {
@@ -107,10 +112,16 @@ body {
 
 .personal-photo {
   width: 400px;
-  max-width: 90%;
   float: left;
   margin: 15px;
 }
+
+@media (max-width: 576px) {
+  .personal-photo {
+    width: 90%;
+  }
+}
+
 
 .list-box {
   display: flex;
@@ -119,8 +130,8 @@ body {
 
 .page-header {
   text-align: center;
-  margin-top: var(--page-top-margin);
-  margin-bottom: var(--page-top-margin);
+  margin-top: $page-top-margin;
+  margin-bottom: $page-top-margin;
 }
 
 // overlays
@@ -195,8 +206,8 @@ body {
 
 .photo {
   background-size: 100% 100%;
-  height: var(--gallery-photo-size);
-  width: var(--gallery-photo-size);
+  height: $gallery-photo-size;
+  width: $gallery-photo-size;
   margin-right: 15px;
   margin-bottom: 15px;
 }
@@ -218,7 +229,7 @@ body {
 }
 
 .formatted-list {
-  margin: var(--vertical-margin)  auto;
+  margin: $vertical-margin  auto;
   width: 80%;
 }
 
@@ -256,6 +267,7 @@ body {
 }
 
 .social-icon {
-  height: 32px;
-  margin: 8px;
+  height: $social-icon-height;
+  margin-right: $social-icon-margin;
+  margin-bottom: $social-icon-margin;
 }

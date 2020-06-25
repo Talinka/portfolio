@@ -40,7 +40,7 @@ export default {
         responsibilities: 'Responsibilities',
         responsibilitiesList: [
           'developing different modules for stream processing and clustering data in the big dataflow system',
-          'creating Windows desktop tools using DevExpress WinForms components for pipeline controlling and configuration.',
+          'creating Windows desktop tools using DevExpress WinForms components for pipeline controlling and configuration',
           'registering, storing and manipulating the information elements of our system using Microsoft SQL Server database',
         ],
       },

@@ -11,7 +11,7 @@ const About = (props) => {
   const getSocial = ({ url, text, icon }, key) => (
     <div key={key}>
       <img src={icon} alt={text} className="social-icon" />
-      <a href={url}>{text}</a>
+      <a href={url} target="_blank" rel="noopener noreferrer">{text}</a>
     </div>
   );
 
@@ -19,7 +19,7 @@ const About = (props) => {
     <>
       <h3 className="page-header">{t('about.aboutTitle')}</h3>
       <section>
-        <img src={talita} alt="personal_photo" className="personal-photo" />
+        <img src={talita} alt="personalphoto" className="personal-photo" />
         {
           aboutList.map((text, i) => <p key={i}>{text}</p>)
         }
@@ -32,11 +32,11 @@ const About = (props) => {
         <h3>{t('about.contactTitle')}</h3>
         <p>{t('about.contactDescription')}</p>
         <Row className="formatted-list">
-          <Col>
+          <Col sm={12} md={6}>
             {[socials.email, socials.gitHub, socials.linkedIn]
               .map((contact, i) => getSocial(contact, i))}
           </Col>
-          <Col>
+          <Col sm={12} md={6}>
             {getSocial(socials.instagram)}
           </Col>
         </Row>
