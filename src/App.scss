@@ -233,6 +233,9 @@ body {
       margin: auto;
       border: none;
     }
+    .carousel-item {
+      height: $size;
+    }
   }
 }
 

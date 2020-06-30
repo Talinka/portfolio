@@ -1,30 +1,47 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Modal } from 'react-bootstrap';
+import { Container, Row, Col, Modal, Carousel } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-// hobby's num for photos
+// hobby's indexes for photos
 const galleryTags = [1, 6, 3, 8, 2, 6, 0, 2, 6, 3, 0, 6];
 
 const HobbyList = () => {
   const { t } = useTranslation();
   const hobbies = t('about.hobbies', { returnObjects: true });
-  const [active, setActive] = useState(-1);
-  const handleHover = (index) => () => setActive(index);
+  const [currentIndex, setCurrentIndex] = useState(-1);
+  const handleHover = (index) => () => setCurrentIndex(index);
 
   const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    setActive(currentIndex);
+    console.log(active);
+    setShow(true);
+  }
   const handleClose = () => setShow(false);
 
-  const getModal = () => (
-    <Modal
-      show={show}
-      onHide={handleClose}
-      centered
-      size="xl"
-    >
-      <div className={`img-fluid photo-big photo-${active + 1}`} />
-    </Modal>
-  );
+  const [active, setActive] = useState(0);
+  const handleSelect = (selectedIndex) => {
+    setActive(selectedIndex);
+  };
+
+  const getModal = () => {
+    return (
+      <Modal
+        show={show}
+        onHide={handleClose}
+        centered
+        size="xl"
+      >
+        <Carousel activeIndex={active} onSelect={handleSelect} indicators={false}>
+          {galleryTags.map((tag, index) => (
+            <Carousel.Item key={index}>
+              <div className={`img-fluid photo-big photo-${index + 1}`} />
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </Modal>
+    );
+  };
 
   return (
     <>
@@ -32,7 +49,7 @@ const HobbyList = () => {
       <Row className="formatted-list">
         {hobbies.map((hobby, index) => (
           <Col lg={4} sm={6}
-            className={`hobby${(galleryTags[active] === index) ? ' active' : ''}`}
+            className={`hobby${(galleryTags[currentIndex] === index) ? ' active' : ''}`}
             key={index}
           >
             <span className="circle" />
@@ -42,7 +59,11 @@ const HobbyList = () => {
       </Row>
       <Container className="gallery">
         {galleryTags.map((tag, index) => (
-          <div key={index} className={`shadow photo-thumb photo-${index + 1}`} onMouseOver={handleHover(index)} onClick={handleShow} />
+          <div key={index}
+            className={`shadow photo-thumb photo-${index + 1}`}
+            onMouseOver={handleHover(index)}
+            onClick={handleShow}
+          />
         ))}
       </Container>
       {getModal()}
