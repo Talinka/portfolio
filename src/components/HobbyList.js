@@ -16,14 +16,13 @@ const HobbyList = () => {
   const handleClose = () => setShow(false);
 
   const getModal = () => (
-    <Modal show={show} onHide={handleClose}>
-      <Modal.Body>
-        <button type="button" className="close" onClick={handleClose}>
-          <span aria-hidden="true">×</span>
-          <span className="sr-only">Close</span>
-        </button>
-        <div className={`img-fluid photo-big photo-${active + 1}`} />
-      </Modal.Body>
+    <Modal
+      show={show}
+      onHide={handleClose}
+      centered
+      size="xl"
+    >
+      <div className={`img-fluid photo-big photo-${active + 1}`} />
     </Modal>
   );
 

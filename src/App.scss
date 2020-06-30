@@ -28,8 +28,7 @@ $double-element-margin: 30px;
 $social-icon-size: 32px;
 $social-icon-margin: $social-icon-size / 4;
 
-$photo-sizes: ("extra-small": 70vw, "small": 400px, "medium": 500px, "large": 700px);
-$photo-breakpoints: ("small": 576px, "medium": 768px, "large": 992px);
+$photo-sizes: ("xs": 100vmin, "sm": 400px, "md": 500px, "lg": 700px);
 
 body {
   font-family: 'Open Sans', serif;
@@ -222,24 +221,17 @@ body {
   height: 100%;
 }
 
-.modal-content {
+.modal {
   height: 100%;
 }
 
-@media (max-width: map-get($photo-breakpoints, "small")) {
-  .modal-dialog {
-    max-width: map-get($photo-sizes, "small");
-    height: map-get($photo-sizes, "extra-small");
-    width: map-get($photo-sizes, "extra-small");
-    margin: auto;
-  }
-}
-
-@each $size-name, $width in $photo-breakpoints {
-  @media (min-width: $width) {
-    .modal-dialog {
-      max-width: map-get($photo-sizes, $size-name);
-      height: map-get($photo-sizes, $size-name);
+@each $size-name, $size in $photo-sizes {
+  @include media-breakpoint-up($size-name) {
+    .modal-content {
+      width: $size;
+      height: $size;
+      margin: auto;
+      border: none;
     }
   }
 }
