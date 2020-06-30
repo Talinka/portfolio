@@ -25,8 +25,8 @@ $gallery-photo-size: 20vh;
 $element-margin: 15px;
 $double-element-margin: 30px;
 
-$social-icon-height: 32px;
-$social-icon-margin: $social-icon-height / 2;
+$social-icon-size: 32px;
+$social-icon-margin: $social-icon-size / 4;
 
 $photo-sizes: ("extra-small": 70vw, "small": 400px, "medium": 500px, "large": 700px);
 $photo-breakpoints: ("small": 576px, "medium": 768px, "large": 992px);
@@ -299,7 +299,6 @@ body {
 }
 
 .social-icon {
-  height: $social-icon-height;
-  margin-right: $social-icon-margin;
-  margin-bottom: $social-icon-margin;
+  height: $social-icon-size;
+  margin: $social-icon-margin;
 }
