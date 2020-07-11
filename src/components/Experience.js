@@ -22,7 +22,7 @@ const Experience = () => {
         <Container>
           <span className="h5">Full front-end JavaScript course, </span>
           <span className="h5 mb-2 text-muted">2019-2020, </span>
-          <a href="https://ru.hexlet.io/professions/frontend" target="_blank" rel="noopener noreferrer">Hexlet.io</a>
+          <a href="https://ru.hexlet.io/u/talita" target="_blank" rel="noopener noreferrer">Hexlet.io</a>
           <img src={certificate} className="w-75" alt="hexlet certificate" />
           <hr />
           <span className="h5">Front-end development and JavaScript, </span>
