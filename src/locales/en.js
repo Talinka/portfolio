@@ -12,7 +12,7 @@ export default {
         (much more difficult, actually :), but I'm enthusiastic about developing and improving these skills. I'm responsible, open-minded and friendly,
         and I truly like to gain knowledge.`,
         `I am from Moscow, Russia. In August 2018 I relocated to Brno, Czech Republic with my family. I'm learning the Czech language with a great interest,
-        my current language level is B1.`,
+        my current language level is B2.`,
       ],
       hobbyTitle: 'Hobbies',
       hobbyDescription: 'In my spare time I do something from the list below or just relax with my family.',
@@ -58,7 +58,7 @@ export default {
     projects: {
       title: 'Projects',
       subtitle: 'My projects',
-      description: `These projects have been created during my studying in order to obtain the main front-end technologies.
+      description: `These projects were created during my studying in order to obtain the main front-end technologies.
         All the projects could be found on GitHub.`,
       frameworks: 'Frameworks and technologies',
       rss: {
@@ -90,7 +90,19 @@ export default {
           The full system state is stored in Redux. For real time messages synchronization application uses WebSockets.`,
         use: ['WebSockets with Socket.IO', 'React', 'Redux', 'Redux-toolkit', 'React Form with Formik', 'Bootstrap on React', 'webpack', 'ESLint'],
       },
-      portfolio: 'This webpage sources could be found on GitHub as well',
+      portfolio: {
+        info: `This webpage is also my front-end project where I used the knowledge I got learnt.`,
+        link: 'Its sources could be found on GitHub as well',
+        description: 'Technologies and frameworks I used:',
+        use: [
+          { tech: 'React', goal: 'as a main framework' },
+          { tech: 'React router', goal: 'for web page navigation' },
+          { tech: 'i18next and react-i18next', goal: 'for the Czech version' },
+          { tech: 'Bootstrap on React', goal: 'for responsive design' },
+          { tech: 'SASS', goal: 'for creating the animation' },
+          { tech: 'GitHub pages', goal: 'for deploy' },
+        ],
+      },
     },
   }
 }

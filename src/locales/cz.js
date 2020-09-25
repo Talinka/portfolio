@@ -12,7 +12,7 @@ export default {
         Mám chuť se i nadále učit novým věcem a rozvíjet své dovednosti.`,
         `Jsem spolehlivá, přátelská a otevřená novým myšlenkám.`,
         `Jsem z Ruska, z Moskvy. Před dvěma roky jsem se s rodinou přestěhovala a teď bydlím v Brně. Učím se cesky a baví mě to, až na čárky :)
-        Teď mám úroveň B1 a pokračuju dál.`,
+        Teď mám úroveň B2 a pokračuju dál.`,
       ],
       hobbyTitle: 'Koníčky',
       hobbyDescription: 'Když mám volný čas, obvykle dělám něco z následujícího seznamu nebo prostě relaxuju z rodinou.',

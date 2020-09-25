@@ -14,7 +14,6 @@ const HobbyList = () => {
   const [show, setShow] = useState(false);
   const handleShow = () => {
     setActive(currentIndex);
-    console.log(active);
     setShow(true);
   }
   const handleClose = () => setShow(false);

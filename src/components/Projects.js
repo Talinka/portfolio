@@ -25,9 +25,19 @@ const Projects = () => {
     <>
       <h3 className="page-header">{t('projects.subtitle')}</h3>
       <p>{t('projects.description')}</p>
-      <p><a className="d-block text-center" href="https://github.com/Talinka/portfolio" alt="portfolio sources">
-        {t('projects.portfolio')}
-      </a></p>
+      <p>
+        {t('projects.portfolio.info')}<br/>
+        <a href="https://github.com/Talinka/portfolio" alt="portfolio sources">
+          {t('projects.portfolio.link')}
+        </a>
+      </p>
+      <p>{t('projects.portfolio.description')}</p>
+      {<ul>
+        {t(`projects.portfolio.use`, { returnObjects: true }).map(({ tech, goal }, i) =>
+          <li key={i}><b>{tech}</b> {goal}</li>
+        )}
+      </ul>
+      }
       <Row>
         {projects.map(({ id, name, githubLink, link }) => (
           <Col key={id} lg={6} className="base-col">
